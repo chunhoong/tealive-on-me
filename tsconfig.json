@@ -18,6 +18,7 @@
       "@api/*": ["api/*"],
       "@group-order/*": ["app/group-order/*"],
       "@order/*": ["app/order/*"],
+      "@user/*": ["app/user/*"],
       "@assets/*": ["assets/*"]
     }
   },
