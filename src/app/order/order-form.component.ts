@@ -8,6 +8,7 @@ import { Ice, Order, Size, Sugar } from './order';
   styleUrls: ['./order-form.component.scss']
 })
 export class OrderFormComponent implements OnInit {
+  @Input() disabled: boolean;
   @Input() order: Order;
   @Input() buttonLabel: string;
   @Output() submit = new EventEmitter<Order>();

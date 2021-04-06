@@ -4,22 +4,11 @@ import { IonicModule } from '@ionic/angular';
 import { Ice, Order, Size, Sugar } from './order';
 import { OrderFormComponent } from './order-form.component';
 
+let component: OrderFormComponent;
+let fixture: ComponentFixture<OrderFormComponent>;
+
 describe('OrderFormComponent - Form without data', () => {
-  let component: OrderFormComponent;
-  let fixture: ComponentFixture<OrderFormComponent>;
-
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        declarations: [OrderFormComponent],
-        imports: [IonicModule.forRoot(), ReactiveFormsModule]
-      }).compileComponents();
-
-      fixture = TestBed.createComponent(OrderFormComponent);
-      component = fixture.componentInstance;
-      fixture.detectChanges();
-    })
-  );
+  beforeEach(waitForAsync(renderWith({ order: undefined })));
 
   it('should render with correct label', () => {
     const label = 'Order';
@@ -38,32 +27,32 @@ describe('OrderFormComponent - Form without data', () => {
 });
 
 describe('OrderFormComponent - Form with existing data', () => {
-  it(
-    'should render with predefined order detail',
-    waitForAsync(() => {
-      const order: Order = {
-        drink: 'Frog bang',
-        quantity: 1,
-        size: Size.Medium,
-        ice: Ice.Full,
-        sugar: Sugar.Slight,
-        toppings: []
-      };
+  const order: Order = {
+    drink: 'Frog bang',
+    quantity: 1,
+    size: Size.Medium,
+    ice: Ice.Full,
+    sugar: Sugar.Slight,
+    toppings: []
+  };
 
-      let component: OrderFormComponent;
-      let fixture: ComponentFixture<OrderFormComponent>;
+  beforeEach(waitForAsync(renderWith({ order })));
 
-      TestBed.configureTestingModule({
-        declarations: [OrderFormComponent],
-        imports: [IonicModule.forRoot(), ReactiveFormsModule]
-      }).compileComponents();
-
-      fixture = TestBed.createComponent(OrderFormComponent);
-      component = fixture.componentInstance;
-      component.order = order;
-      fixture.detectChanges();
-
-      expect(component.orderForm.value).toEqual({ ...order, toppings: '' });
-    })
-  );
+  it('should render with predefined order detail', () => {
+    expect(component.orderForm.value).toEqual({ ...order, toppings: '' });
+  });
 });
+
+function renderWith({ order }) {
+  return () => {
+    TestBed.configureTestingModule({
+      declarations: [OrderFormComponent],
+      imports: [IonicModule.forRoot(), ReactiveFormsModule]
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(OrderFormComponent);
+    component = fixture.componentInstance;
+    component.order = order;
+    fixture.detectChanges();
+  };
+}

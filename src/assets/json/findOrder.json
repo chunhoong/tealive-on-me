@@ -1,0 +1,12 @@
+{
+  "id": "12345",
+  "groupOrderId": "56789",
+  "userId": "chunhoong",
+  "drink": "Frog bang",
+  "quantity": 1,
+  "size": "small",
+  "ice": "slight",
+  "sugar": "slight",
+  "toppings": [],
+  "createdAt": "123456"
+}

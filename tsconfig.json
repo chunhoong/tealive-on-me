@@ -12,10 +12,13 @@
     "target": "es2015",
     "module": "es2020",
     "lib": ["es2018", "dom"],
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
     "paths": {
       "@api/*": ["api/*"],
       "@group-order/*": ["app/group-order/*"],
-      "@order/*": ["app/order/*"]
+      "@order/*": ["app/order/*"],
+      "@assets/*": ["assets/*"]
     }
   },
   "angularCompilerOptions": {

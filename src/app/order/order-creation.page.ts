@@ -4,11 +4,13 @@ import { OrderService } from './order.service';
 
 @Component({
   selector: 'app-order',
-  templateUrl: './order.page.html',
-  styleUrls: ['./order.page.scss']
+  templateUrl: './order-creation.page.html',
+  styleUrls: ['./order-creation.page.scss']
 })
-export class OrderPage {
+export class OrderCreationPage {
   constructor(private orderService: OrderService) {}
 
-  handleSubmit(order: Order) {}
+  handleSubmit(order: Order) {
+    this.orderService.saveOrder(order);
+  }
 }

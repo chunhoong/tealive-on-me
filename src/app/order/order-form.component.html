@@ -1,33 +1,33 @@
 <form [formGroup]="orderForm" (ngSubmit)="handleSubmit()">
   <ion-item>
     <ion-label position="stacked">Drink</ion-label>
-    <ion-input type="text" formControlName="drink"></ion-input>
+    <ion-input type="text" formControlName="drink" [disabled]="disabled"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="stacked">Quantity</ion-label>
-    <ion-input type="number" formControlName="quantity"></ion-input>
+    <ion-input type="number" formControlName="quantity" [disabled]="disabled"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="stacked">Size</ion-label>
-    <ion-input type="text" formControlName="size"></ion-input>
+    <ion-input type="text" formControlName="size" [disabled]="disabled"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="stacked">Ice</ion-label>
-    <ion-input type="text" formControlName="ice"></ion-input>
+    <ion-input type="text" formControlName="ice" [disabled]="disabled"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="stacked">Sugar</ion-label>
-    <ion-input type="text" formControlName="sugar"></ion-input>
+    <ion-input type="text" formControlName="sugar" [disabled]="disabled"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="stacked">Toppings</ion-label>
-    <ion-input type="text" formControlName="toppings"></ion-input>
+    <ion-input type="text" formControlName="toppings" [disabled]="disabled"></ion-input>
   </ion-item>
 
-  <ion-button expand="block" type="submit" id="submit">{{buttonLabel}}</ion-button>
+  <ion-button expand="block" type="submit" id="submit" *ngIf="buttonLabel">{{buttonLabel}}</ion-button>
 </form>

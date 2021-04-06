@@ -10,6 +10,10 @@ export class OrderService {
     return this.orderApi.saveOrder(order);
   }
 
+  findOrder(id: string): Promise<Order> {
+    return this.orderApi.findOrder(id);
+  }
+
   updateOrder(order: Order): Promise<void> {
     return this.orderApi.updateOrder(order);
   }
