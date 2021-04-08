@@ -4,7 +4,7 @@ import { OrderCreationPage } from './order-creation.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'create',
     component: OrderCreationPage
   }
 ];

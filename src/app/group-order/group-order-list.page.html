@@ -1,0 +1,5 @@
+<ion-content>
+  <ng-container *ngIf="groupOrders">
+    <group-order *ngFor="let groupOrder of groupOrders" [groupOrder]="groupOrder"></group-order>
+  </ng-container>
+</ion-content>

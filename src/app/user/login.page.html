@@ -1,3 +1,15 @@
-<p>
-  login works!
-</p>
+<ion-content>
+  <form [formGroup]="loginForm" (ngSubmit)="handleLogin()">
+    <ion-item>
+      <ion-label position="stacked">Username</ion-label>
+      <ion-input formControlName="username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input type="Password" formControlName="password"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" type="submit">Login</ion-button>
+  </form>
+</ion-content>

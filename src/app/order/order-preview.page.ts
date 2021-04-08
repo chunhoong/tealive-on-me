@@ -4,7 +4,6 @@ import { Order } from './order';
 import { OrderService } from './order.service';
 
 @Component({
-  selector: 'app-order-preview',
   templateUrl: './order-preview.page.html',
   styleUrls: ['./order-preview.page.scss']
 })

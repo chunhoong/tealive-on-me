@@ -1,12 +1,13 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UserRoutingModule } from './user-routing.module';
-import { LoginPage } from './login.page';
+import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { LoginPage } from './login.page';
+import { UserRoutingModule } from './user-routing.module';
 import { UserService } from './user.service';
 
 @NgModule({
-  imports: [CommonModule, IonicModule, UserRoutingModule],
+  imports: [CommonModule, IonicModule, UserRoutingModule, ReactiveFormsModule],
   declarations: [LoginPage],
   providers: [UserService]
 })

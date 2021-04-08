@@ -13,7 +13,11 @@ const routes: Routes = [
   },
   {
     path: 'order',
-    loadChildren: () => import('./order/order.module').then((m) => m.OrderModule)
+    loadChildren: () => import('@order/order.module').then((m) => m.OrderModule)
+  },
+  {
+    path: 'group-order',
+    loadChildren: () => import('@group-order/group-order.module').then((m) => m.GroupOrderModule)
   },
   {
     path: 'user',

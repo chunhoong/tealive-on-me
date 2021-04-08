@@ -1,0 +1,23 @@
+[
+  {
+    "id": "123455",
+    "username": "chunhoong",
+    "createdAt": "",
+    "isAvailable": true,
+    "isTreat": true
+  },
+  {
+    "id": "223455",
+    "username": "benlow",
+    "createdAt": "",
+    "isAvailable": true,
+    "isTreat": true
+  },
+  {
+    "id": "323455",
+    "username": "keehan",
+    "createdAt": "",
+    "isAvailable": true,
+    "isTreat": false
+  }
+]

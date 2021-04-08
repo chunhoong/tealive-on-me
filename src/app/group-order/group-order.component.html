@@ -13,13 +13,17 @@
     <ion-row>
       <hr margin-top margin-bottom class="divider">
     </ion-row>
-    <ion-row justify-content-around>
-      <span tappable (click)="handleOrder()">
-        <strong style="color: #cbb954;">Order</strong>
-      </span>
-      <span tappable (click)="handleView()">
-        <strong style="color: #53cb60">View</strong>
-      </span>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <span tappable (click)="handleOrder()">
+          <strong style="color: #cbb954;">Order</strong>
+        </span>
+      </ion-col>
+      <ion-col class="ion-text-center">
+        <span tappable (click)="handleView()">
+          <strong style="color: #53cb60">View</strong>
+        </span>
+      </ion-col>
     </ion-row>
   </ion-card-content>
 </ion-card>

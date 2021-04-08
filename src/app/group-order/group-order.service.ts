@@ -11,7 +11,7 @@ export class GroupOrderService {
   }
 
   fetchGroupOrders(): Promise<GroupOrder[]> {
-    return this.fetchGroupOrders();
+    return this.groupOrderApi.fetchGroupOrders();
   }
 
   updateGroupOrder(groupOrder: GroupOrder): Promise<void> {

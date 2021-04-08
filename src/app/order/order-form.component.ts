@@ -18,12 +18,12 @@ export class OrderFormComponent implements OnInit {
 
   ngOnInit() {
     this.orderForm = this.fb.group({
-      drink: [this.order?.drink ?? '', Validators.required],
-      quantity: [this.order?.quantity ?? 1, Validators.required],
-      size: [this.order?.size ?? Size.Small, Validators.required],
-      ice: [this.order?.ice ?? Ice.Full, Validators.required],
-      sugar: [this.order?.sugar ?? Sugar.Full, Validators.required],
-      toppings: [this.order?.toppings.join(', ') ?? '']
+      drink: [{ value: this.order?.drink ?? '', disabled: this.disabled }, Validators.required],
+      quantity: [{ value: this.order?.quantity ?? 1, disabled: this.disabled }, Validators.required],
+      size: [{ value: this.order?.size ?? Size.Small, disabled: this.disabled }, Validators.required],
+      ice: [{ value: this.order?.ice ?? Ice.Full, disabled: this.disabled }, Validators.required],
+      sugar: [{ value: this.order?.sugar ?? Sugar.Full, disabled: this.disabled }, Validators.required],
+      toppings: [{ value: this.order?.toppings.join(', ') ?? '', disabled: this.disabled }]
     });
   }
 

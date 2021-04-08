@@ -7,7 +7,7 @@ export class GroupOrderApiImpl extends GroupOrderApi {
   saveGroupOrder(groupOrder: GroupOrder): Promise<void> {
     throw new Error('Method not implemented.');
   }
-  fetchGroupOrders(): Promise<unknown> {
+  fetchGroupOrders(): Promise<GroupOrder[]> {
     throw new Error('Method not implemented.');
   }
   updateGroupOrder(groupOrder: GroupOrder): Promise<void> {
