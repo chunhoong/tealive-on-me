@@ -1,0 +1,25 @@
+<ion-card>
+  <ion-card-content>
+    <ion-row>
+      <strong>{{groupOrder.username}}</strong>&nbsp;
+      <span *ngIf="!groupOrder.isTreat; else treat">is calling for order.</span>
+      <ng-template #treat>
+        <span>is treating!</span>
+      </ng-template>
+    </ion-row>
+    <ion-row>
+      <span class="small">{{groupOrder.createdAt | date: 'medium'}}</span>
+    </ion-row>
+    <ion-row>
+      <hr margin-top margin-bottom class="divider">
+    </ion-row>
+    <ion-row justify-content-around>
+      <span tappable (click)="handleOrder()">
+        <strong style="color: #cbb954;">Order</strong>
+      </span>
+      <span tappable (click)="handleView()">
+        <strong style="color: #53cb60">View</strong>
+      </span>
+    </ion-row>
+  </ion-card-content>
+</ion-card>

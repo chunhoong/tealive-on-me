@@ -1,6 +1,6 @@
 export interface GroupOrder {
   id: string;
-  userId: string;
+  username: string;
   createdAt: string;
   isAvailable: boolean;
   isTreat: boolean;

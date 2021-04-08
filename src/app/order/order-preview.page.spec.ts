@@ -12,12 +12,12 @@ let fixture: ComponentFixture<OrderPreviewPage>;
 describe('OrderPreviewPage - With right to edit', () => {
   beforeEach(waitForAsync(renderWith({ hasRightToEdit: true })));
 
-  it('should render with existing order', () => {
+  it('should create with existing order', () => {
     expect(component).toBeTruthy();
     expect(component.order).toBeDefined();
   });
 
-  it('should render with button', () => {
+  it('should create with button', () => {
     expect(component.buttonLabel).toBe('Update order');
   });
 });
@@ -25,7 +25,7 @@ describe('OrderPreviewPage - With right to edit', () => {
 describe('OrderPreviewPage - Without right to edit', () => {
   beforeEach(waitForAsync(renderWith({ hasRightToEdit: false })));
 
-  it('should render without button', () => {
+  it('should create without button', () => {
     expect(component.buttonLabel).toBe('');
   });
 });

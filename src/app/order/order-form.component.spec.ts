@@ -10,7 +10,7 @@ let fixture: ComponentFixture<OrderFormComponent>;
 describe('OrderFormComponent - Form without data', () => {
   beforeEach(waitForAsync(renderWith({ order: undefined })));
 
-  it('should render with correct label', () => {
+  it('should create with correct label', () => {
     const label = 'Order';
     component.buttonLabel = label;
     fixture.detectChanges();
@@ -38,7 +38,7 @@ describe('OrderFormComponent - Form with existing data', () => {
 
   beforeEach(waitForAsync(renderWith({ order })));
 
-  it('should render with predefined order detail', () => {
+  it('should create with predefined order detail', () => {
     expect(component.orderForm.value).toEqual({ ...order, toppings: '' });
   });
 });

@@ -4,13 +4,14 @@ import { RouteReuseStrategy } from '@angular/router';
 import { GroupOrderModule } from '@group-order/group-order.module';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { OrderModule } from '@order/order.module';
+import { UserModule } from '@user/user.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, OrderModule, GroupOrderModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, OrderModule, GroupOrderModule, UserModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent]
 })
